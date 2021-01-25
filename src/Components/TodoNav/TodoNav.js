@@ -3,12 +3,30 @@ import styled from 'styled-components';
 import {Context} from "../../Functions/Context";
 import {TodoSearchList} from "../TodoSearchList/TodoSearchList";
 import {getSearchOptions, hideSearchOptions} from "../../Functions/Functions";
+import github from "../../img/github-logo.png"
 
 const TodoNavigator = styled.div`
 display: flex;
 justify-content: left;
 font-family: 'Yusei Magic', sans-serif;
 position: relative;
+
+    .git {
+    position: absolute;
+    right: 0;
+    background: #efefef;
+    box-shadow: none;
+    transition: all 0.4s ease-in;
+    &:hover {
+    background: #7575fb;
+    box-shadow: 1px 1px 20px #4158D0;
+    transition: all 0.4s ease-in;
+    }
+      img {
+      width: 30px;
+      height: 30px;
+      }
+    }
 
     button {
     font-family: 'Yusei Magic', sans-serif;
@@ -72,6 +90,9 @@ export const TodoNav = () => {
                        type="text" placeholder="type something"/>
                 <TodoSearchList />
             </div>
+            <a href="https://github.com/andygr1n1/todo2021" target="_blank" rel="noreferrer">
+                <button className='git'><img src={github} alt=""/></button>
+            </a>
         </TodoNavigator>
     )
 

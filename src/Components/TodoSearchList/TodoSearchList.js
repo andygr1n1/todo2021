@@ -58,7 +58,7 @@ export const TodoSearchList = () => {
 
                         :
 
-                        searchFilter(tag, searchByTagValue)
+                        searchFilter(tag.toLowerCase(), searchByTagValue.toLowerCase())
                             ?
 
                             <li>{tag}</li>

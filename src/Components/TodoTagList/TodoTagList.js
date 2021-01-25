@@ -12,7 +12,7 @@ export const TodoTagList = () => {
                 return (
                     (
 
-                        searchFilter(tag, searchByTagValue)
+                        searchFilter(tag.toLowerCase(), searchByTagValue.toLowerCase())
                             ?
                             <TodoElement name={name} completed={completed} index={index} tag={tag}/>
                             :
